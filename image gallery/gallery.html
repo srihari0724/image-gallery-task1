@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Image Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Image Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="#gallery1">Gallery 1</a></li>
+                <li><a href="#gallery2">Gallery 2</a></li>
+                <li><a href="#gallery3">Gallery 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="gallery1" class="gallery-section">
+        <h2>Gallery 1</h2>
+        <div class="gallery">
+            <img src="./images/img1.jpg" alt="Image 1" onclick="openModal(0)">
+            <img src="./images/img2.jpeg" alt="Image 2" onclick="openModal(1)">
+            <img src="./images/img3.jpg" alt="Image 3" onclick="openModal(2)">
+        </div>
+    </section>
+
+    <section id="gallery2" class="gallery-section">
+        <h2>Gallery 2</h2>
+        <div class="gallery">
+            <img src="./images/img4.jpg" alt="Image 4" onclick="openModal(3)">
+            <img src="./images/img6.jpg" alt="Image 5" onclick="openModal(4)">
+            <img src="./images/img7.jpg" alt="Image 6" onclick="openModal(5)">
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <section id="gallery3" class="gallery-section">
+        <h2>Gallery 3</h2>
+        <div class="gallery">
+            <img src="./images/img8.jpg" alt="Image 7" onclick="openModal(6)">
+            <img src="./images/img9.jpg" alt="Image 8" onclick="openModal(7)">
+            <img src="./images/img10.jpeg" alt="Image 9" onclick="openModal(8)">
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <script src="gallery.js"></script>
+</body>
+</html>
